@@ -1,6 +1,7 @@
 *~
 .*.swp
 output/
+_deploy/
 *.bbl
 *.toc
 *.aux

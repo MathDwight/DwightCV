@@ -11,5 +11,11 @@ all: $(PDF)
 %.pdf: %.tex
 	tectonic -X compile $<
 
+deploy: all
+	./deploy.sh
+
+show: $(PDF)
+	xdg-open $<
+
 clean:
-	rm -f $(PDF)
+	rm -f $(PDF) deploy

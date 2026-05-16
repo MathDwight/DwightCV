@@ -1,6 +1,6 @@
-# Curriculum Vitae Summary (CV Short)
+# Curriculum Vitae (CV) and Summary (CV Short) 
 
-These are the LaTeX sources for my academic CV summary i.e. a 2-pager. 
+These are the LaTeX sources for my academic CV and CV summary, i.e., a 2-pager. 
 
 (Much thanks to Leonardo Uieda --> GitHub user leouieda <-- )
 

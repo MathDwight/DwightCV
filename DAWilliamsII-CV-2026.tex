@@ -1,0 +1,918 @@
+%Copyright (c) 2017 Leonardo Uieda
+%All rights reserved.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Adopted from Leonardo Uieda: "A clean template for an academic CV. This is a short summary version."
+% Modified by Dwight Anderson Williams II in Spring 2024. More modifications in 2025.
+% For original: https://github.com/leouieda/cv/
+% More from Leonard Uieda:
+% "Uses tabularx to create two column entries (date and job/edu/citation).
+% Defines commands to make adding entries simpler."
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt]{article}
+\emergencystretch 3em
+
+% Identifying information
+\newcommand{\Title}{Curriculum Vit\ae\ 2026}
+\newcommand{\FullCV}{\href{https://mathdwight.com/files/DAWilliamsII_CV.pdf}{Extended Curriculum Vit\ae}}
+\newcommand{\FirstName}{Dwight}
+\newcommand{\MiddleName}{Anderson}
+\newcommand{\LastName}{Williams II}
+\newcommand{\Initials}{DA}
+\newcommand{\AcaSuffix}{PhD}
+\newcommand{\Pronouns}{he/his}
+\newcommand{\MyName}{\FirstName\ \MiddleName\ \LastName,\ \AcaSuffix}
+\newcommand{\Me}{\underline{\LastName, \Initials}}  % For citations
+\newcommand{\Profile}{mathdwight} % common profile name
+\newcommand{\Email}{dwight.williamsii@morgan.edu}
+\newcommand{\PersonalWebsite}{www.\Profile.com}
+
+% Academic Profiles
+\newcommand{\arXivProfile}{williams\_d\_5}
+\newcommand{\GitHubProfile}{\Profile}
+\newcommand{\GoogleScholarProfile}{vLtfxSIAAAAJ}
+\newcommand{\ORCIDProfile}{0000-0003-2611-2388}
+\newcommand{\RGProfile}{Dwight-Williams-II}
+\newcommand{\SciRateProfile}{\Profile}
+\newcommand{\ZoteroProfile}{\Profile}
+
+% Useful aliases
+\newcommand{\MSU}{Morgan State University}
+\newcommand{\FAMU}{Florida A\&M University}
+\newcommand{\FSU}{The Florida State University}
+\newcommand{\UTA}{The University of Texas at Arlington}
+\newcommand{\ISU}{Iowa State University}
+\newcommand{\Pomona}{Pomona College}
+\newcommand{\MSRIUP}{Mathematical Sciences Research Institute Undergraduate Program}
+\newcommand{\MSRI}{Mathematical Sciences Research Institute}
+\newcommand{\MLFRJ}{Math Leaders 4 Racial Justice}
+\newcommand{\CAD}{Charles A. Dana Center}
+\newcommand{\CADUT}{Charles A. Dana Center at The University of Texas at Austin}
+\newcommand{\UWM}{UW-Milwaukee}
+\newcommand{\NSF}{National Science Foundation}
+\newcommand{\PRISSEMllc}{PRISSEM Academic Services, LLC}
+\newcommand{\PRISSEM}{PRISSEM Academic Services}
+\newcommand{\IHQC}{IBM--HBCU Quantum Center}
+\newcommand{\Yale}{Yale University}
+\newcommand{\YaleASCEND}{Alliance for Scholarship, Collaboration, Engagement, Networking, and Development}
+\newcommand{\SUMRY}{Summer Undergraduate Math Research at Yale}
+\newcommand{\AMS}{American Mathematical Society}
+\newcommand{\MAA}{Mathematical Association of America}
+\newcommand{\NAM}{National Association of Mathematicians}
+\newcommand{\SCMNS}{School of Computer, Mathematical, and Natural Sciences}
+\newcommand{\GAANN}{Graduate Assistance in Areas of National Need}
+\newcommand{\ICM}{Industrial \& Computational Mathematics}
+
+% Names for citing coauthors
+\newcommand{\Dimitar}{Grantcharov, D}
+\newcommand{\Jonas}{Hartwig, JT}
+\newcommand{\PEH}{Harris, PE}
+\newcommand{\Rebecca}{Garcia, RE}
+\newcommand{\Yasmin}{Aguillon, Y}
+\newcommand{\Dylan}{Alvarenga, D}
+\newcommand{\Surya}{Kotapati, S}
+\newcommand{\Carlos}{Mart\'{i}nez~Mori, JC}
+\newcommand{\Cas}{Monroe, CD}
+\newcommand{\Zia}{Saylor, Z}
+\newcommand{\Camelle}{Tieu, C}
+\newcommand{\Michael}{Young, M}
+\newcommand{\Sarah}{Sword, S}
+\newcommand{\Aris}{Winger, A}
+\newcommand{\Christian}{McRoberts, C}
+\newcommand{\Maya}{Bartel, M}
+\newcommand{\Simone}{Sisneros-Thiry, S}
+\newcommand{\Miriam}{Gates, M}
+\newcommand{\Carl}{Westine, C}
+\newcommand{\Shanise}{Walker, S}
+\newcommand{\Imhotep}{Hogan, IB}
+\newcommand{\Tomas}{Aguilar-Fraga, T}
+\newcommand{\Daniel}{Alofamoni~Quiñonez, D}
+\newcommand{\DanielTwo}{Quiñonez, D}
+\newcommand{\Aalliyah}{Celestine, A}
+\newcommand{\Parneet}{Gill, P}
+\newcommand{\Jakeyl}{Johnson, J}
+\newcommand{\Kobe}{Lawson-Chavanu, K}
+\newcommand{\Lina}{Liu, L}
+\newcommand{\Aaron}{Ortiz, A}
+\newcommand{\Lauren}{Quesada, L}
+\newcommand{\Cynthia}{Rivera~Sánchez, CM}
+\newcommand{\Christopher}{Soto, C}
+\newcommand{\Dirk}{Tolson III, D}
+\newcommand{\Jacob}{van~der~Leeuw, J}
+\newcommand{\Pamela}{Vargas, P}
+\newcommand{\KimberlyP}{Hadaway, KP}
+\newcommand{\Jan}{Kretschmann, J}
+\newcommand{\Kimberly}{Harry, KJ}
+\newcommand{\Jennifer}{Elder, J}
+\newcommand{\Alex}{Moon, A}
+\newcommand{\Kate}{Melhuish, KM}
+\newcommand{\Kristen}{Lew, KM}
+\newcommand{\Lino}{Guajardo, LR}
+\newcommand{\Norman}{Contreras, N}
+\newcommand{\Paul}{Dawkins, PC}
+\newcommand{\Alexander}{Diaz-Lopez, A}
+\newcommand{\KyeongHah}{Roh, KH}
+\newcommand{\Edna}{Jones, E}
+\newcommand{\Priyam}{Patel, P}
+\newcommand{\AlexanderN}{Wilson, AN}
+\newcommand{\Lillian}{Uhl, LR}
+\newcommand{\Matthew}{Dorang, M}
+\newcommand{\Marcus}{McLaurin, MK}
+
+% To emphasize pre-baccalaureate, pre-doctoral status
+\newcommand{\UGCollab}[1]{\textbf{#1}}
+\newcommand{\GradCollab}[1]{\textit{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Load packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Full Unicode support for non-ASCII characters
+
+% \usepackage[T1,T2A]{fontenc}
+\usepackage[lutf8]{luainputenc}
+% \usepackage[english,russian]{babel}
+
+\usepackage{polyglossia}
+\usepackage[symbol]{footmisc}
+
+% https://tex.stackexchange.com/questions/136742/changing-background-color-of-text-in-latex
+\usepackage{tikz}
+\newcommand{\tinycolorbox}[2]{\tikz[baseline=(a.base),inner sep=1.5pt]\node[fill=#1](a){#2};}
+\newcommand{\HBCU}{\tinycolorbox{red}{H}\tinycolorbox{Gold}{B}\tinycolorbox{DarkGreen}{C}\tinycolorbox{white}{U}}
+
+% Set main fonts
+% Icon fonts
+\usepackage{fontawesome5}
+\usepackage{academicons}
+
+%Hyphenation rules
+%--------------------------------------
+%\usepackage{hyphenat}
+%\hyphenation{ма-те-ма-ти-ка вос-ста-нав-ли-вать}
+%--------------------------------------
+
+% Disable hyphenation
+\usepackage[none]{hyphenat}
+
+% Control the font size
+\usepackage{anyfontsize}
+% additional basic settings
+\input{tucyradd.def} % <--- definitions for Cyrillic
+
+% fonts and languages
+%\setmainfont{CMU Serif}
+% https://tex.stackexchange.com/questions/528687/the-current-latin-font-does-not-contain-the-cyrillic-script
+\setmainfont{CMU Serif}
+\newfontfamily{\cyrillicfont}{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\newfontfamily{\cyrillicfontsf}{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+\newfontfamily{\cyrillicfonttt}{CMU Typewriter Text}
+\setmainlanguage{english}
+\setotherlanguage{russian}
+
+% For fancy and multipage tables
+\usepackage{tabularx}
+\usepackage{ltablex}
+
+% For new environments
+\usepackage{environ}
+
+%%% Counter business %%%%
+% count type of items such as pubication type, e.g., peer-reviewed articles in math education vs prepreints in mathematics
+\usepackage{chngcntr}
+\usepackage{totcount}
+\usepackage{fp}
+\usepackage{spreadtab}
+\newtotcounter{mathwritePreprintCount}
+\newtotcounter{mathwriteSubmitCount}
+\newtotcounter{mathwritePublishCount}
+\newtotcounter{mathwriteBookChapterCount}
+\newtotcounter{mathwriteCorrespondingCount}
+%
+\newtotcounter{mathproposalSubmitCount}
+\newtotcounter{mathproposalRecommendedCount}
+\newtotcounter{mathproposalFundedCount}
+\newtotcounter{mathproposalFunding}
+\newtotcounter{mathapplicationSubmitCount}
+\newtotcounter{mathapplicationRecommendedCount}
+\newtotcounter{mathapplicationFundedCount}
+\newtotcounter{mathapplicationFunding}
+%
+\newtotcounter{matheducationwritePreprintCount}
+\newtotcounter{matheducationwriteSubmitCount}
+\newtotcounter{matheducationwritePublishCount}
+\newtotcounter{matheducationwriteBookChapterCount}
+\newtotcounter{matheducationwriteCorrespondingCount}
+%
+%\newtotcounter{matheducationproposalPreprintCount}
+\newtotcounter{matheducationproposalSubmitCount}
+\newtotcounter{matheducationproposalRecommendedCount}
+\newtotcounter{matheducationproposalFundedCount}
+\newtotcounter{matheducationproposalFunding}
+\newtotcounter{matheducationapplicationSubmitCount}
+\newtotcounter{matheducationapplicationRecommendedCount}
+\newtotcounter{matheducationapplicationFundedCount}
+\newtotcounter{matheducationapplicationFunding}
+%
+
+% Quotes
+\usepackage[autostyle=true, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+% Manage dates and times
+\usepackage{datetime}
+
+% commas in numbers
+% \usepackage{siunitx}
+% \sisetup{group-separator = {,}, group-minimum-digits = 3}
+\usepackage{numprint}
+
+% Set the page margins
+\usepackage{geometry}
+
+% To get the total page numbers (\pageref{LastPage})
+\usepackage{lastpage}
+
+% Control spacing in enumerates
+\usepackage{enumitem}
+
+% Use custom colors
+\usepackage[dvipsnames, svgnames]{xcolor}
+
+% Configure section titles
+\usepackage{titlesec}
+
+% mathy packages
+\usepackage{amssymb, amsthm, amsmath, mathtools}
+
+% Fancy header configuration
+\usepackage{fancyhdr}
+
+% spaces in URLs
+\PassOptionsToPackage{obeyspaces}{url}
+% Control PDF metadata and links
+\usepackage[colorlinks=true]{hyperref}
+
+% Template configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{%
+  margin=12.7mm,
+  headsep=0mm,
+  headheight=0mm,
+  footskip=5mm,
+  includehead=true,
+  includefoot=true
+}
+
+% Custom colors
+\definecolor{mediumgray}{gray}{0.37}
+\definecolor{lightgray}{gray}{0.9}
+\definecolor{mediumblue}{HTML}{2060c2}
+\definecolor{lightblue}{HTML}{a0c3ff}
+%%% Additinoal colors
+\definecolor{darkorange}{rgb}{1.0, 0.55, 0.0}
+\definecolor{darkorangex}{rgb}{0.89, 0.49, 0.0}
+\definecolor{darkorangexx}{rgb}{0.89, 0.55, 0.26}
+\definecolor{cardinal}{rgb}{0.77, 0.12, 0.23}
+\definecolor{caribbeangreen}{rgb}{0.0, 0.8, 0.6}
+\definecolor{asparx}{rgb}{0.53, 0.76, 0.42}
+\definecolor{ocre}{RGB}{0,96,128}
+\definecolor{orng}{RGB}{224,112,0}
+\definecolor{dred}{RGB}{164,28,0}
+\definecolor{bluegray}{rgb}{0.4, 0.6, 0.8}
+\definecolor{ceil}{rgb}{0.57, 0.63, 0.81}
+\definecolor{ceilz}{rgb}{0.27, 0.33, 0.41}
+\definecolor{coolblack}{rgb}{0.0, 0.18, 0.39}
+\definecolor{darkslateblue}{rgb}{0.28, 0.24, 0.55}
+\definecolor{glaucous}{rgb}{0.38, 0.51, 0.71}
+\definecolor{periwinkle}{rgb}{0.8, 0.8, 1.0}
+\definecolor{richlilac}{rgb}{0.71, 0.4, 0.82}
+\definecolor{coolgrey}{rgb}{0.55, 0.57, 0.67}
+\definecolor{timberwolf}{rgb}{0.86, 0.84, 0.82}
+\definecolor{wheat}{rgb}{0.96, 0.87, 0.7}
+\definecolor{sunset}{rgb}{0.98, 0.84, 0.65}
+\definecolor{seashell}{rgb}{1.0, 0.96, 0.93}
+\definecolor{goldenyellow}{rgb}{1.0, 0.87, 0.0}
+\definecolor{burntorange}{rgb}{0.8, 0.33, 0.0}
+% No indentation
+\setlength\parindent{0cm}
+
+% Increase the line spacing
+\renewcommand{\baselinestretch}{1.1}
+% and the spacing between rows in tables
+\renewcommand{\arraystretch}{1.25}
+
+% Remove space between items in itemize and enumerate
+\setlist{nosep}
+
+% Set the spacing and format of sections
+\titleformat{\section}
+  {\normalfont\Large\mdseries} % format
+  {} % label
+  {0pt} % separation (left separation for hang)
+  {} % text before title
+  [\titlerule\vspace{0.25\baselineskip}] % text after title
+\titlespacing*{\section}
+  {0pt} % left pad
+  {0.1cm} % before
+  {0cm} % after
+
+% Disable number of sections. Use this instead of "section*" so that the sections still
+% appear as PDF bookmarks. Otherwise, would have to add the table of contents entries
+% manually.
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+% Define a new environment to place all CV entries in a 2-column table.
+% Left column are the dates, right column the entries.
+\newcommand{\TablePad}{\vspace{-0.2cm}}
+\NewEnviron{EntriesTableDuration}{
+\TablePad
+\begin{tabularx}{\textwidth}{@{}p{0.10\textwidth}@{\hspace{0.02\textwidth}}p{0.88\textwidth}@{}}
+  \BODY
+\end{tabularx}
+\TablePad
+}
+\NewEnviron{EntriesTableYear}{
+\TablePad
+\begin{tabularx}{\textwidth}{@{}p{0.05\textwidth}@{\hspace{0.01\textwidth}}p{0.94\textwidth}@{}}
+  \BODY
+\end{tabularx}
+\TablePad
+}
+
+% Macros to set the year and duration on the left column
+\newcommand{\Duration}[2]{\fontsize{10pt}{0}\selectfont \texttt{#1-#2}}
+\newcommand{\Year}[1]{\fontsize{10pt}{0}\selectfont \texttt{#1}}
+\newcommand{\Ongoing}{curr}
+\newcommand{\Future}{future}
+
+% Macros to add links and mark publications
+\newcommand{\DOI}[1]{DOI: \href{https://doi.org/#1}{#1}}
+\newcommand{\Publication}[2]{\href{https://doi.org/#1}{#2} (DOI: #1)}
+\newcommand{\Website}[1]{\href{https://#1}{#1}}
+\newcommand{\Preprint}[1]{Preprint: \href{https://doi.org/#1}{#1}}
+
+% Commands to display profiles with academicons and fontawesome
+\newcommand{\arXiv}{arXiv: \href{https://arXiv.org/a/\arXivProfile.html}{\arXivProfile}}
+\newcommand{\arXivIcon}{\href{https://arXiv.org/a/\arXivProfile}{\aiarXiv}}
+
+\newcommand{\GitHub}{GitHub: \href{https://github.com/\GitHubProfile}{\GitHubProfile}}
+\newcommand{\GitHubIcon}{\href{https://github.com/\GitHubProfile}{\faGithub}}
+
+\newcommand{\GoogleScholar}{Google: \href{https://scholar.google.com/citations?=\GoogleScholarProfile}{\GoogleScholarProfile}}
+\newcommand{\GoogleScholarIcon}{\href{https://scholar.google.com/citations?user=\GoogleScholarProfile}{\aiGoogleScholar}}
+
+\newcommand{\ORCID}{ORCID: \href{https://ORCID.org/\ORCIDProfile}{\ORCIDProfile}}
+\newcommand{\ORCIDIcon}{\href{https://ORCID.org/\ORCIDProfile}{\aiOrcid}}
+
+\newcommand{\RG}{ResearchGate: \href{https://researchgate.net/profile/\RGProfile}{\RGProfile}}
+\newcommand{\RGIcon}{\href{https://researchgate.net/profile/\RGProfile}{\aiResearchGate}}
+
+\newcommand{\SciRate}{SciRate: \href{https://SciRate.com/\SciRateProfile}{\SciRateProfile}}
+\newcommand{\SciRateIcon}{\href{https://SciRate.com/\SciRateProfile}{\aiSciRate}}
+
+\newcommand{\Zotero}{Zotero: \href{https://zotero.org/\ZoteroProfile}{\ZoteroProfile}}
+\newcommand{\ZoteroIcon}{\href{https://zotero.org/\ZoteroProfile}{\aiZotero}}
+
+%\newcommand{\arXivAbs}[1]{arXiv: \href{https://arXiv.org/abs/#1}{#1}}
+\newcommand{\arXivAbs}[1]{\href{https://arXiv.org/abs/#1}{arXiv}: #1}
+\newcommand{\homepage}[1]{\href{https://#1.com}{Homepage}}
+% \newcommand{\homepage}[1]{\href{https://#1.com}{MathDwight's Homepage}}
+
+% Define command to insert month name and year as date
+\newdateformat{monthyear}{\monthname[\THEMONTH] \THEYEAR}
+
+% https://tex.stackexchange.com/questions/9425/how-to-fix-footnote-position-at-the-bottom-of-the-page
+% footnote
+\renewcommand{\footnoterule}{\vfill\kern -3pt \hrule width 0.4\columnwidth \kern 2.6pt}
+
+% Configure a fancy footer
+\newcommand{\Separator}{\hspace{3pt}|\hspace{3pt}}
+\newcommand{\FooterFont}{\footnotesize\color{mediumgray}}
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{%
+  \FooterFont{}
+  \MyName{}
+  \Separator{}
+  \Title{}
+  %\Separator{}
+  %\FullCV
+}
+\rfoot{%
+  \FooterFont{}
+  Last updated: \monthyear\today{} % Deleted comma between month and year--search within for definition of \monthyear
+  \Separator{}
+  \thepage\space of\space \pageref*{LastPage}
+}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.07pt}
+\preto{\footrule}{\color{mediumgray}}
+
+% Metadata for the PDF output and control of hyperlinks
+\hypersetup{
+  colorlinks,
+  allcolors=burntorange,
+  breaklinks=true,
+  pdftitle={\Title{} - \MyName},
+  pdfauthor={\MyName},
+}
+
+\begin{document}
+\begin{minipage}[t]{0.6\textwidth}
+  {\fontsize{16pt}{0}\selectfont\MyName\ (\Pronouns)} \\\href{mailto:\Email}{\Email}  %\Website{\PersonalWebsite}
+\hspace{0.3cm}
+ %Scholarly Profiles:
+  \arXivIcon~$\mid$
+ % \GitHubIcon~$\mid$
+  \GoogleScholarIcon~$\mid$
+  \ORCIDIcon~$\mid$
+  \RGIcon~$\mid$
+  %\SciRateIcon~$\mid$
+  \ZoteroIcon %\Website{\PersonalWebsite}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+  \begin{flushright}
+    \Title{}\\ \href{https://www.morgan.edu/mathematics/faculty-and-staff/dwight-anderson-williams-ii}{Faculty Profile}/\homepage{\Profile}
+  \end{flushright}
+\end{minipage}
+\\[0.1cm]
+\textcolor{mediumgray}{\rule{\textwidth}{3pt}}
+%
+  Department of Mathematics, Morgan State University, 1700 E Cold Spring Lane, Baltimore, MD 21251.
+  %Scholarly Profiles used to bere here.
+
+%  \hrule
+\vspace{-0.3cm}
+  \begingroup \center{%
+  \href{https://en.wikipedia.org/wiki/List_of_mathematical_societies}{Acronyms}: \AMS\ (AMS); \MAA\ (MAA); \NAM\ (NAM); \NSF\ (NSF).
+  }
+  \endgroup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+
+\begin{EntriesTableDuration}
+  \Duration{2016}{2020}  &
+  \textbf{PhD in Mathematics}, \UTA.
+  \newline
+  \GAANN\ (GAANN) Fellow.
+  \newline
+  Advisor: Dimitar Grantcharov.
+  \newline
+  Dissertation: \href{https://mavmatrix.uta.edu/cgi/viewcontent.cgi?article=1168\&context=math\_dissertations}{Bases of infinite-dimensional representations of orthosymplectic Lie superalgebras.}
+  \\
+  \Duration{2012}{2014}  &
+  \textbf{MS in Pure Mathematics}, \FSU.
+  \\
+  \Duration{2008}{2012}  &
+  \textbf{BS in Mathematics}, \FAMU. \HBCU\ Alumnus.
+\end{EntriesTableDuration}
+  \vspace{0.3cm}
+  \centerline{*Since PhD}
+\vspace{0.3cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{*Appointments}
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Academic}
+\vspace{-0.3cm}
+\begin{EntriesTableDuration}
+\Duration{2023}{\Ongoing}  &
+  \textbf{Assistant Professor},  Department of Mathematics, \MSU. \HBCU\ Faculty.
+  \\
+\Duration{2025}{2025}  &
+  \textbf{Visiting Associate Research Scientist},  Department of Mathematics, \Yale.
+  \\
+\Duration{2022}{2023}  &
+  \textbf{Visiting Assistant Professor}, Department of Mathematics and Statistics, \Pomona.
+\\
+\Duration{2020}{2021}  &
+    \textbf{Postdoc Research Associate}, NSF EES--1920753, \ISU.
+    \newline
+    Supervisor/PI: Michael Young.
+\\
+\Duration{2021}{2021}  &
+    \textbf{Postdoctoral Research Advisor}, \MSRIUP\ (MSRI-UP), MSRI (online).
+    \newline
+    Supervisors: Rebecca E. Garcia \& Pamela E. Harris.
+\end{EntriesTableDuration}
+\vspace{-0.3cm}
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Consultative}
+\vspace{-0.3cm}
+\begin{EntriesTableDuration}
+\Duration{2024}{2025}  &
+    \textbf{Writing Coach}, \IHQC\ via \PRISSEMllc.
+\\
+\Duration{2022}{2022}  &
+    \textbf{Facilitator}, \MLFRJ, \CAD\ (online).
+\end{EntriesTableDuration}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{*Research}
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Funded Grant Proposals}
+\vspace{-0.3cm}
+
+\begin{EntriesTableDuration}
+\Duration{2025}{2028} & \href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=2503008}{NSF DMS--2503008}. \textbf{Excellence in Research: Super Representation Theory, Quantum Spaces, and Algebra Maps}. PI: \Me. \$300,000.  \addtocounter{mathproposalSubmitCount}{1}\addtocounter{mathproposalRecommendedCount}{1}\addtocounter{mathproposalFunding}{300000}
+ \end{EntriesTableDuration}
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Fellowships Awarded}
+\vspace{-0.3cm}
+\begin{EntriesTableYear}
+ \Year{2025} &
+\textbf{ASCEND Faculty Research Fellowship}, \YaleASCEND\ (ASCEND) Initiative, \Yale. \$35,000. \addtocounter{mathapplicationSubmitCount}{1}\addtocounter{mathapplicationRecommendedCount}{1}\addtocounter{mathapplicationFunding}{35000}
+ \end{EntriesTableYear}
+
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Publications}
+\begin{spreadtab}{{tabular}{lllll}}
+@ \textbf{Field} & @ \textbf{Preprints \begin{math} \supseteq \end{math}}  & @ \textbf{Peer-reviewed} & @ \textbf{Books/Chapters} \\
+@ Math & \fpeval{\totvalue{mathwritePreprintCount}}  & \fpeval{\totvalue{mathwritePublishCount}} & \fpeval{\totvalue{mathwriteBookChapterCount}} \\
+@ Math Education & \fpeval{\totvalue{matheducationwritePreprintCount}}  & \fpeval{\totvalue{matheducationwritePublishCount}} & \fpeval{\totvalue{matheducationwriteBookChapterCount}} \\ \hline
+@ Math \& Math Education & sum(b2:b3) & sum(c2:c3) & sum(d2:d3)
+\end{spreadtab}
+
+\vspace{0.1cm}
+The \href{https://www.ams.org/profession/leaders/culture/JointResearchandItsPublicationfinal.pdf}{AMS's statement} on the culture of mathematical research and scholarship influences authorship conventions: \textcolor{blue}{$\big|$}alphabetical order within vertical bars\textcolor{blue}{$\big|$}; \textbf{pre-baccalaureate}/\textit{pre-doctoral} author at date of submission.
+
+%%%%%%%%%%%%%%%%%%%%%
+    \subsubsection{Peer-reviewed Articles in Mathematics}
+
+    %\paragraph{Peer-reviewed}
+\begin{EntriesTableYear}
+  \Year{2026}  &
+  \textbf{The defective parking space and defective Kreweras numbers}. \addtocounter{mathwritePreprintCount}{1}\addtocounter{mathwritePublishCount}{1}
+   \newline
+   \Publication{10.1016/j.disc.2026.115164}{Discrete Math.}, \arXivAbs{2405.14635}.
+   \newline
+  \textcolor{blue}{$\big|$}\PEH; \GradCollab{\Alex}; \GradCollab{\Aaron}; \GradCollab{\Lauren}; \UGCollab{\Cynthia}; \Me; \AlexanderN\textcolor{blue}{$\big|$}.
+ \\
+\Year{2025} &
+  \textbf{Symplectic differential reduction algebras and skew-affine generalized Weyl algebras}. \addtocounter{mathwritePreprintCount}{1}\addtocounter{mathwritePublishCount}{1}\addtocounter{mathwriteCorrespondingCount}{1}
+  \newline
+  \Publication{10.3842/SIGMA.2025.001}{SIGMA}, \arXivAbs{2403.15968}.
+  \newline
+  \textcolor{blue}{$\big|$}\Jonas; \Me\textcolor{blue}{$\big|$}.
+ \\
+\Year{2024}  &
+  \textbf{Interval and $\ell$-interval rational parking functions}. \addtocounter{mathwritePreprintCount}{1}\addtocounter{mathwritePublishCount}{1}
+  \newline
+  \Publication{10.46298/dmtcs.12598}{Discrete Math. Theor. Comput. Sci.}, \arXivAbs{2311.14055}.
+  \newline
+  \textcolor{blue}{$\big|$}\GradCollab{\Tomas}; \Jennifer; \Rebecca; \GradCollab{\KimberlyP}; \PEH; \GradCollab{\Kimberly}; \GradCollab{\Imhotep}; \GradCollab{\Jakeyl}; \GradCollab{\Jan}; \GradCollab{\Kobe}; \Carlos; \GradCollab{\Cas}; \GradCollab{\DanielTwo}; \GradCollab{\Dirk}; \Me\textcolor{blue}{$\big|$}.
+  \\
+\Year{2023}  &
+  \textbf{On parking functions and the Tower of Hanoi}. \addtocounter{mathwritePreprintCount}{1}\addtocounter{mathwritePublishCount}{1}
+  \newline
+  \Publication{10.1080/00029890.2023.2206311}{Amer. Math. Monthly}, \arXivAbs{2206.00541}.
+  \newline
+  \textcolor{blue}{$\big|$}\UGCollab{\Yasmin}; \UGCollab{\Dylan}; \PEH; \UGCollab{\Surya}; \GradCollab{\Carlos}; \GradCollab{\Cas}; \UGCollab{\Zia}; \UGCollab{\Camelle}; \Me\textcolor{blue}{$\big|$}.
+  \\
+\Year{2023}  &
+  \textbf{Ghost center and representations of the diagonal reduction algebra of $\mathfrak{osp}(1|2)$}. \addtocounter{mathwritePreprintCount}{1}\addtocounter{mathwritePublishCount}{1}
+  \newline
+  \Publication{10.1016/j.geomphys.2023.104788}{J. Geom. Phys.}, \arXivAbs{2203.08068}.
+  \newline
+  \textcolor{blue}{$\big|$}\Jonas; \Me\textcolor{blue}{$\big|$}.
+\\
+  \Year{2022}  &
+   \textbf{Diagonal reduction algebra for $\mathfrak{osp}(1|2)$}. \addtocounter{mathwritePreprintCount}{1}\addtocounter{mathwritePublishCount}{1}
+  \newline
+ \Publication{10.1134/S0040577922020015}{Theoret. and Math. Phys.}, \arXivAbs{2106.04380}.
+  \newline
+  \textcolor{blue}{$\big|$}\Jonas; \Me\textcolor{blue}{$\big|$}.
+ \\
+  \Year{2022}  &
+\textbf{\textrussian{Диагональная редукционная алгебра для супералгебры Ли} $\mathfrak{osp}(1|2)$}.
+   \newline
+  \Publication{10.4213/tmf10138}{ТМФ}.
+   \newline
+   \textcolor{blue}{$\big|$}\Jonas; \Me\textcolor{blue}{$\big|$}.
+   \newline
+   \textcolor{blue}{Russian-language version of the previous article. Not included in any count.}
+     \end{EntriesTableYear}
+
+
+\subsubsection{Preprints in Mathematics (unpublished)}
+
+\begin{EntriesTableYear}
+\Year{2025}  &
+  \textbf{Dirac reduction algebra}. \addtocounter{mathwritePreprintCount}{1}
+  \newline
+   \arXivAbs{2507.21730}.
+  \newline
+   \textcolor{blue}{$\big|$}\GradCollab{\Matthew}; \Jonas; \Me\textcolor{blue}{$\big|$}.
+ \\
+\Year{2025}  &
+  \textbf{Exact solutions to the Klein--Gordon equation via reduction algebras}. \addtocounter{mathwritePreprintCount}{1}
+  \newline
+   \arXivAbs{2507.04572}.
+  \newline
+   \textcolor{blue}{$\big|$}\Jonas; \GradCollab{\Lillian}; \Me\textcolor{blue}{$\big|$}.
+   \\
+\Year{2024} &
+  \textbf{Action of $\mathfrak{osp}(1|2n)$ on polynomials tensor $\mathbb{C}^{0|2n}$}. \addtocounter{mathwritePreprintCount}{1}\addtocounter{mathwriteCorrespondingCount}{1}
+  \newline
+   \arXivAbs{2408.12324}.
+  \newline
+   \Me.
+    \end{EntriesTableYear}
+
+    \subsubsection{In Progress}
+\begin{EntriesTableYear}
+\Year{}  &
+  \textbf{Corank-one orthosymplectic reduction superalgebras}.
+  \newline
+   \textcolor{blue}{$\big|$}\GradCollab{\Marcus}; \Me\textcolor{blue}{$\big|$}.
+ \\
+\Year{}  &
+  \textbf{Maxwell reduction algebra}.
+  \newline
+   \textcolor{blue}{$\big|$}\GradCollab{\Matthew}; \Jonas; \Me\textcolor{blue}{$\big|$}.
+     \end{EntriesTableYear}
+
+\begingroup
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+\setmainlanguage{english}
+\setotherlanguage{russian}
+%%%%%%%%%%%%%%%%%%%%%
+    \subsubsection{Peer-reviewed Articles in Education}
+
+\begin{EntriesTableYear}
+\Year{2026} &
+\textbf{Diverse storylines of entering the mathematics professoriate}. \addtocounter{matheducationwritePreprintCount}{1}\addtocounter{matheducationwritePublishCount}{1}
+\newline
+\Publication{10.1007/s10649-026-10492-7}{Educational Studies in Mathematics}.
+\newline
+\Kate; \GradCollab{\Lino}; \Kristen;
+\textcolor{blue}{$\big|$}\Paul; \Alexander; \Rebecca; \PEH; \Edna; \Priyam; \KyeongHah; \Shanise; \Me; \Aris\textcolor{blue}{$\big|$}.
+\\
+\Year{2025} &
+\textbf{Humanizing proof-based mathematics instruction through experiences reading rich proofs and mathematician stories}.  \addtocounter{matheducationwritePreprintCount}{1}\addtocounter{matheducationwritePublishCount}{1}
+\newline
+\Publication{10.1007/s42330-025-00354-4}{CJSMTE}.
+\newline
+\textcolor{blue}{$\big|$}\GradCollab{\Norman}; \Paul; \GradCollab{\Lino}; \PEH; \Kristen; \Kate; \KyeongHah; \Me; \Aris\textcolor{blue}{$\big|$}.
+\\
+\Year{2024} &
+\textbf{Opposing dimensions in mathematicians’ counter narratives written for undergraduate students}. \addtocounter{matheducationwritePreprintCount}{1}\addtocounter{matheducationwritePublishCount}{1}
+\newline
+     \href{http://sigmaa.maa.org/rume/RUME26_Proceedings2024-letter.pdf}{Proceedings of the 26th Conference on Research on Undergraduate Mathematics} (PDF).
+     \newline RUME proceedings are covered by ISSN 2474-9346.
+\newline
+\Kate; \GradCollab{\Lino}; \GradCollab{\Norman};
+\textcolor{blue}{$\big|$}\Paul; \Alexander; \Rebecca; \Kristen; \PEH; \KyeongHah; \Shanise; \Me; \Aris\textcolor{blue}{$\big|$}.
+ \end{EntriesTableYear}
+%%%%%%%%%%%%%%%%%%%%%
+    \subsubsection{Books}
+\begin{EntriesTableYear}
+\Year{} &
+\textbf{Reading and Appreciating Mathematical Proofs} (currently used at Texas State University; future wide-release as an open access book) \addtocounter{matheducationwriteBookChapterCount}{1}
+\Kate; \Kristen;
+\textcolor{blue}{$\big|$}\Paul; \Alexander; \Rebecca; \Pamela; \Edna; \Priyam; \KyeongHah; \Shanise; \Me; \Aris\textcolor{blue}{$\big|$}.
+\end{EntriesTableYear}
+
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Additional Research Writings}
+\begin{EntriesTableYear}
+
+\Year{2021}  &
+  \textbf{Informing Change: Stories of Graduate Students from Underrepresented Groups in Mathematics Doctoral Programs}.
+  \newline
+  Association for the Study of Higher Education 46\textsuperscript{th} General Conference. \href{https://web.archive.org/web/20221105071519/https://www.ashe.ws//Files/Past Conferences/ASHE 2021 Program Book.pdf}{Program book} (PDF).
+  \newline
+  \Carl; \Sarah; \Michael; \GradCollab{\Maya}; \Me; \PEH.
+  \\
+\Year{2021}  &
+  \textbf{Studying Successful Doctoral Students in Mathematics from Underrepresented Groups}.
+  \newline
+  Accelerating Systemic Change Network (ASCN) \& Network of STEM Education Centers (NSEC) Transforming Institutions Conference 2021. \href{https://ascnhighered.org/ASCN/transforming_institutions/2021/program/posters/session_c/2/243631.html}{Poster webpage}.
+  \newline
+  \Sarah; \Michael; \Carl; \Aris; \GradCollab{\Maya}; \Me; \GradCollab{\Christian}; \Simone; \Miriam; \PEH.
+ \end{EntriesTableYear}
+
+ \endgroup
+%%%%%%%%%%%%%%%%%%%%%
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Presentations}
+%%%%%%%%%%%%%%%%%%%%%
+    \subsubsection{Select Invited Talks}
+
+\begin{EntriesTableDuration}
+\Year{Jul 2026} & "Solving physics equations using orthosymplectic reduction superalgebras", short communication in Mathematical Physics, International Congress of Mathematicians 2026, Philadelphia, PA.\\
+\Year{Mar 2026} & "Navigating mathematical and political structures (Navigating MAPS): A perspective on the works of Black researchers in theoretical mathematics", Online Speaker Series, History of Mathematics Special Interest Group of the MAA (HOM-SIGMAA).\\
+\Year{Jul 2025} & "LSAs and PDEs", \SUMRY\ (SUMRY) Colloquium, Yale University.\\
+\Year{Apr 2025} & "Lie superalgebras and partial differential equations", NAM Faculty Conference on Research and Teaching Excellence, Medgar Evers College.\\
+\Year{Mar 2024} & "Reduction (super)algebras", Algebra Seminar, \UWM\ (online). \\
+\Year{Mar 2024} & "Lie superalgebras, representation theory, and mathematical physics", Colloquium, \MSU\ (online).\\
+\Year{Feb 2024} & "Laplace's equation, Dirac's equation, and algebraic methods", AMS UTA Seminar, \UTA\ (online).\\
+\Year{Nov 2023} & "Extremal equations \& algebraic methods", Early Career Math Colloquium (online).\\
+\Year{Apr 2023} & "The semi-differential reduction algebra of $\mathfrak{sp}(4)$", Special Session on Representation Theory, Geometry, and
+Mathematical Physics, AMS Spring Central Sectional Meeting, University of Cincinnati.\\
+\Year{Nov 2022} & "A tale of two worlds: parking functions \& reduction algebras", Algebra/Number Theory/Combinatorics Seminar, Claremont Colleges.\\
+\Year{Apr 2022} & "The ABCs of Pandemic Postdoc-ing", MSRI Special Session on the MSRI Undergraduate Program, The Joint Mathematics Meetings (online; formerly Seattle, WA).\\
+\Year{May 2021} & "Diagonal reduction algebra of $\mathfrak{osp}(1|2)$", Special Session on Categorical and Combinatorial Methods in Representation Theory, AMS Spring Western Sectional Meeting (online).\\
+\Year{Jan 2021} & “Relations, parity, and super representation theory”, Haynes-Granville-Browne Session of Presentations by Recent Doctoral Recipients, The Joint Mathematics Meetings (online; formerly Washington, D.C.).
+    \end{EntriesTableDuration}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{*Service}
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Community}
+
+\textbf{Regional/National}: \href{https://www.hiddennorms.com/}{Hidden NORMS Webinar and website}; Fresh Researchers in Algebra, Combinatorics, and Topology Active Learning Seminar (\href{https://\Profile.com/FRACTALS}{FRACTALS}).
+
+\textbf{State}: Maryland Statewide Math Group (formerly the Public Higher Ed. Math Affinity Group); Fostering Equity in the STEM Classroom with Pamela E. Harris and Aris Winger (in conjunction with the Iowa Governor’s STEM Advisory Council).
+
+\textbf{City Area}: Baltimore City Community-based Mathematics (lead by Whitney Johnson) in the role of Mathematician.
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{University}
+
+\subsubsection{\texorpdfstring{\MSU}{Morgan State University}}
+\vspace{-0.3cm}
+\textbf{Committees}: Actuarial Science (Department--special); Graduate Comprehensive Exam (Department--standing); Graduate Curriculum (Department--standing).
+
+\textbf{Student-facing}: MATH Club support (undergraduate); \LaTeX\ student log designer (graduate/undergraduate); POWER (Black Male Initiative within the \SCMNS) mentor.
+%%%%%%%
+\subsubsection{\texorpdfstring{\Pomona}{Pomona College}}
+\vspace{-0.3cm}
+\textbf{Student-facing}: Career Pathways in the Mathematical Sciences.
+%%%%%%%
+\subsubsection{\texorpdfstring{\ISU}{Iowa State University}}
+\vspace{-0.3cm}
+\textbf{Faculty-facing}: Black Faculty and Staff Association game/trivia night co-organizer.
+
+\textbf{Student-facing}:  Mathematicians of Color Alliance (MOCA) support.
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Profession}
+\textbf{Committees}: Inclusivity Prize (MAA); Nominations Subcommittee (Chair; NAM); Proposal Reviewer (MAA).
+
+\textbf{Conference/Seminar Organizing}: AMS Spring Eastern Sectional (Howard University) \href{https://www.ams.org/meetings/sectional/2312\_program\_ss15.html\#title}{Special Session} co-organized with Saber Ahmed; AMS Spring Southeastern Sectional (online; formerly Georgia Tech University) \href{https://www.ams.org/meetings/sectional/2287_program_ss13.html}{Special Session} co-organized with Jonas T. Hartwig.
+
+\textbf{Memberships}: AMS; MAA; NAM (Lifetime).
+
+\textbf{Panels/Topics}: student-led initiatives, faculty burnout, graduate experiences, creating a new math world, etc.
+
+\textbf{Refereeing}: Communications in Algebra.
+
+\textbf{Reviewing}: zbMATH Open; MAA Focus.
+
+\textbf{Webinar Series}: "Advocating for Students of Color: There's More You Can Do" with Pamela E. Harris, Vanessa Rivera Quiñones, Aris Winger, and Michael Young.
+%%%%%%%%%%%%%%%%%%%%%
+    \subsubsection{Writings on the Profession}
+\begin{EntriesTableYear}
+ \Year{2022}  &
+  \textbf{People Over Math: A Co-created Principle for Successful Research Communities}.
+  \newline
+  MAA FOCUS. \href{http://digitaleditions.walsworthprintgroup.com/publication/?m=7656\&i=749450\&p=26\&fbclid=IwAR19q6M4ZQ1I8uncyU-iuGHsHfz-6JHFiZFHrg9thmyGqXAESJYRlaHXijc\&ver=html5}{Digital edition}.
+  \newline
+  \Rebecca; \PEH; \Me; \GradCollab{\Carlos}; \GradCollab{\Cas}; \UGCollab{\Tomas}; \UGCollab{\Yasmin}; \UGCollab{\Daniel}; \UGCollab{\Dylan}; \UGCollab{\Aalliyah}; \UGCollab{\Parneet}; \UGCollab{\Imhotep}; \UGCollab{\Jakeyl}; \UGCollab{\Kobe}; \UGCollab{\Lina}; \UGCollab{\Aaron}; \UGCollab{\Lauren}; \UGCollab{\Cynthia}; \UGCollab{\Christopher}; \UGCollab{\Camelle}; \UGCollab{\Dirk}; \UGCollab{\Jacob}; \UGCollab{\Pamela}.
+\end{EntriesTableYear}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{*Teaching and Advising}
+%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Research Supervision}
+%%%%%%%%%%%%%%%%%%%%%
+    \subsection{Dissertation Chair}
+%\vspace{-0.3cm}
+\begin{EntriesTableDuration}
+\Duration{2025}{2027 expected} & Marcus McLaurin.
+
+\ICM, Department of Mathematics, \MSU.
+
+Jointly advised with Asamoah Nkwanta.
+
+Dissertation Topic: Superderivations and the reduction problem.
+
+\end{EntriesTableDuration}
+%%%%%%%%%%%%%%%%%%%%%
+%\vspace{-0.3cm}
+    \subsection{Undergraduate Thesis Advisor}
+%\vspace{-0.3cm}
+
+\begin{EntriesTableDuration}
+
+\Duration{2022}{2023} & Irmak Bukey.
+
+Department of Mathematics and Statistics, \Pomona.
+
+"Reduction algebras: Verifying solutions to Laplace's equation".\\
+
+\Duration{2022}{2023} & Andrew Shannon.
+
+Department of Mathematics and Statistics, \Pomona.
+
+"The Diffie-Hellman problem in Lie algebras revisited".
+
+\end{EntriesTableDuration}
+%%%%%%%%%%%%%%%%%%%%%
+%\vspace{-0.3cm}
+    \subsection{Undergraduate Research Mentor}
+%\vspace{-0.3cm}
+\begin{EntriesTableDuration}
+
+\Duration{2025}{2025} & Kaylyn Bolaños, Abhinav Poudel, Rommy Sasson.
+
+Program: SUMRY 2025.
+
+"Superalgebras and polynomial spaces" (presentation). \\
+
+\Duration{2021}{2021} & Aaron Ortiz, Lauren J. Quesada, Cynthia Marie Rivera Sánchez.
+
+Program: MSRI-UP 2021: Parking Functions: Choose your own adventure.
+
+"The defective parking space" (report/presentation).\\
+
+\Duration{2021}{2021} & Tomás Aguilar-Fraga, Kobe Lawson-Chavanu, Dirk Tolson III.
+
+Program: MSRI-UP 2021: Parking Functions: Choose your own adventure.
+
+"$\ell$-Interval parking functions" (report/presentation).
+
+ \end{EntriesTableDuration}
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Educational Wayfinding}
+%%%%%%%%%%%%%%%%%%%%%
+    \subsubsection{Graduate Studies}
+\vspace{-0.3cm}
+
+    \begin{EntriesTableDuration}
+\Duration{2024}{2024} & Marcus McLaurin (\MSU).
+
+Program: Designed training for doctoral study using \LaTeX.\\
+
+\Duration{2020}{2021} & Ethan Bush, Alejandra Marcelino, Christian McRoberts (\ISU); Quiyana Murphy (Virginia Tech).
+
+Program: Designed online mentoring and academic seminar ("The Reunion") for graduate students in their pursuit of developing algebraic acumen.
+
+\end{EntriesTableDuration}
+
+%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3cm}
+    \subsubsection{Post-baccalaureate Studies}
+\vspace{-0.3cm}
+
+\begin{EntriesTableDuration}
+
+\Duration{2020}{2021} & Kendall Bowens, Gauge Burnett, Christopher Lefrak, Clare Sibley (\ISU).
+
+Program: Designed online mentoring and academic seminar ("PB Party") for post-baccalaureates in support of their proposed graduate study.
+
+\end{EntriesTableDuration}
+%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3cm}
+    \subsubsection{Undergraduate Studies}
+\vspace{-0.3cm}
+
+\begin{EntriesTableDuration}
+
+\Duration{2023}{2024} & Angeluis Sayavongsa-Vaughn, Twymun Safford (\MSU).
+
+Program: Designed mentoring and academic seminar for undergradautes to experience and/or create mathematical visualization via MANIM.\\
+
+\Duration{2023}{2023} & Irmak Bukey, Giselle Umutoni (\Pomona).
+
+Program: Designed class for undergraduates to create mathematical visualization via MANIM projects.
+\end{EntriesTableDuration}
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Enrichment}
+\textbf{Certification}: Quality Matters Rubric Update Seventh Edition (RU) 2023.
+
+\textbf{Conferences/Workshops}: Introduction to Accessibility for Mathematics, MAA; Metacognition: Teach STEM Students How to Learn, Saundra McGuire; Morgan Institute for Strategic Teaching, \MSU.
+
+%%%%%%%%%%%%%%%%%%%%%
+\subsection{Instruction}
+\textbf{\MSU}:
+\href{https://catalog.morgan.edu/content.php?filter\%5B27\%5D=MATH\&filter\%5B29\%5D=\&filter\%5Bcourse\_type\%5D=-1\&filter\%5Bkeyword\%5D=\&filter\%5B32\%5D=1\&filter\%5Bcpage\%5D=1\&cur\_cat\_oid=27\&expand=\&navoid=1991\&search\_database=Filter\#acalog\_template\_course\_filter}{Graduate}: MATH 505 Abstract Algebra I (3 sections); MATH 506 Abstract Algebra II (3 sections). \href{https://catalog.morgan.edu/content.php?filter\%5B27\%5D=MATH\&filter\%5B29\%5D=\&filter\%5Bcourse\_type\%5D=-1\&filter\%5Bkeyword\%5D=\&filter\%5B32\%5D=1\&filter\%5Bcpage\%5D=1\&cur\_cat\_oid=26\&expand=\&navoid=1881\&search\_database=Filter\#acalog\_template\_course\_filter}{Undergraduate}:
+MATH 340 Intro to Differential Equations; MATH 413 Algebraic Structures I (3 sections); MATH 414 Algebraic Structures II; MATH 431 Mathematical Theory of Statistics I (2 sections); MATH 432 Mathematical Theory of Statistics II; MATH 450 Senior Seminar.
+
+\textbf{\Pomona}:
+\href{https://coursedog-static-public.s3.us-east-2.amazonaws.com/pomona/2022-2023%20Pomona%20College%20Catalog.pdf}{Undergraduate}: MATH 032 PO Calculus III (2 sections); MATH 101 PO Introduction to Analysis;
+MATH 171 PO Abstract Algebra I; MATH 199 IRPO Independent Research: Intro to Manim via Combinatorics (and Algebra).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Other Scholarly Activities}
+%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}[leftmargin=4cm] %
+    \item[\textbf{Honors/Media:}]  \href{https://mathematicallygiftedandblack.com/honorees/dwight-anderson-williams-ii/}{Mathematically Gifted \& Black} (2025); \href{https://sites.google.com/view/meetamathematician/interviews}{M$\Sigma\Sigma$T a Mathematician} (2022); \#BlackInMathWeek (2020); Outstanding GAANN Student (2020); International Congress of Mathematicians Travel Grant (2018); Peer Mentor Award (2018); USA Today as \href{https://en.wikipedia.org/wiki/Honda_Campus_All-Star_Challenge#/media/File:Florida_A&M.jpg}{Honda Campus All-stars Challenge champion} (2011).
+    \item[\textbf{Global Conferencing:}]
+    \emph{In-person}: International Congress of Mathematicians, Rio de Janeiro, Brazil (2018); Conference on Algebras, Representations, and Applications, Universidad Nacional de San Antonio Abad del Cusco, Cusco, Peru (2018).
+
+    \emph{Online}: Representations of Lie Superalgebras and Related Topics, IPM-Isfahan Branch, Isfahan, Iran (2023).
+\end{enumerate}
+\end{document}
